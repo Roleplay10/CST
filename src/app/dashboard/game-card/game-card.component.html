@@ -1,0 +1,7 @@
+<nz-card style="width: 400px" [nzTitle]="game.title" [nzExtra]="extraTemplate">
+  <img [src]="game.image" alt="" />
+  <p>{{ game.description }}</p>
+</nz-card>
+<ng-template #extraTemplate>
+  <app-modal [game]="game"></app-modal>
+</ng-template>

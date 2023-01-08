@@ -1,0 +1,7 @@
+<button  nz-button [nzType]="'primary'" (click)=showModal()><span>Click for more info</span></button>
+<nz-modal [(nzVisible)]="isVisible" [nzTitle]="game.title" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+  <ng-container *nzModalContent>
+    <img [src]="game.image" alt="" />
+  <p>{{ game.description }}</p>
+  </ng-container>
+</nz-modal>
